@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Mr. Khan - Amazing & Delicious Food</title>
+  <meta name="title" content="Grilli - Amazing & Delicious Food">
+  <meta name="description" content="This is a Restaurant html template made by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">Mr. Khan</p>
+  </div>
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.png" width="110" height="110" alt="Mr Khan - Home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+
+              <span class="span">Home</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#menu" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Menus</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <a href="#" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Our Chefs</span>
+            </a>
+          </li> -->
+
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Contact</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            Shop no:R-03, Sector 48 C Korangi, <br>
+            Karachi City, Sindh 74900
+          </address>
+
+          <p class="body-4 navbar-text">Open: 5:00 pm - 2:00 am</p>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">Booking Request</p>
+
+          <a href="tel:+923703541599" class="body-1 contact-number hover-underline">
+            +92 370 3541599
+          </a>
+        </div>
+
+      </nav>
+
+      <a href="#contact" class="btn btn-secondary">
+        <span class="text text-1">Find A Table</span>
+
+        <span class="text text-2" aria-hidden="true">Find A Table</span>
+      </a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #MENU
+      -->
+
+      <section class="section menu" aria-label="menu-label" id="menu">
+        <div class="container">
+
+          <p class="section-subtitle text-center label-2">Special Selection</p>
+
+          <h2 class="headline-1 section-title text-center">Delicious Menu</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu1.jpg" width="170" height="170" loading="lazy" alt="Greek Salad"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="" class="card-title">Burger</a>
+                    </h3>
+                    <select name="Burger" class="input-field">
+                        <option disabled selected value>-- select an option --</option>
+                        <option value="Zinger Burger = 250">Zinger Burger = 250</option>
+                        <option value="Mighty Burger = 350">Mighty Burger = 350</option>
+                        <option value="Jumbo Burger = 599">Jumbo Burger = 599</option>
+                        <option value="Zinger Cheese Burger = 299">Zinger Cheese Burger = 299</option>
+                        <option value="Mighty Cheese Burger = 399">Mighty Cheese Burger = 399</option>
+                      </select>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu2.jpg" width="170" height="170" loading="lazy" alt="Lasagne"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="https://www.foodpanda.pk/restaurant/dzjq/mr-khan-broast-and-fastfood" class="card-title">Pizza</a>
+                    </h3>
+                    <select name="" class="input-field">
+                        <option disabled selected value>-- select an option --</option>
+                        <option value="Small Pizza = 199">Small Pizza = 199</option>
+                        <option value="Regular Pizza = 299">Regular Pizza = 299</option>
+                        <option value="Large Pizza = 449">Large Pizza = 449</option>
+                      </select>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu4.jpeg" width="170" height="170" loading="lazy" alt="Tokusen Wagyu"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="https://www.foodpanda.pk/restaurant/dzjq/mr-khan-broast-and-fastfood" class="card-title">Calzon</a>
+                    </h3>
+                    <select name="" class="input-field">
+                        <option disabled selected value>-- select an option --</option>
+                        <option value="Tikka Regular = 299">Tikka Regular = 299</option>
+                        <option value="Tikka Large = 449">Tikka Large = 449</option>
+                        <option value="Fajita Regular = 299">Fajita Regular = 299</option>
+                        <option value="Fajita Large = 499">Fajita Large = 499</option>
+                        <option value="Afghani Regular = 299">Afghani Regular = 299</option>
+                        <option value="Afghani Large = 499">Afghani Large = 499</option>
+                      </select>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu3.jpeg" width="170" height="170" loading="lazy" alt="Olivas Rellenas"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="https://www.foodpanda.pk/restaurant/dzjq/mr-khan-broast-and-fastfood" class="card-title">Lasagna</a>
+                    </h3>
+                    <select name="" class="input-field">
+                        <option disabled selected value>-- select an option --</option>
+                        <option value="Chicken Lasagna Small = 299">Chicken Lasagna Small = 299</option>
+                        <option value="Chicken Lasagna Large = 599">Chicken Lasagna Large = 599</option>
+                      </select>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu6.jpg" width="170" height="170" loading="lazy" alt="Opu Fish"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="https://www.foodpanda.pk/restaurant/dzjq/mr-khan-broast-and-fastfood" class="card-title">Roll</a>
+                    </h3>
+                    <select name="" class="input-field">
+                        <option disabled selected value>-- select an option --</option>
+                        <option value="Zinger Roll = 160">Zinger Roll = 160</option>
+                        <option value="Zinger Cheese Roll = 199">Zinger Cheese Roll = 199</option>
+                        <option value="Party Roll = 250">Party Roll = 250</option>
+                        <option value="Party Cheese Roll = 299">Party Cheese Roll = 299</option>
+                      </select>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu7.jpg" width="170" height="170" loading="lazy" alt="Opu Fish"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="https://www.foodpanda.pk/restaurant/dzjq/mr-khan-broast-and-fastfood" class="card-title">Pasta</a>
+                    </h3>
+                    <select name="" class="input-field">
+                        <option disabled selected value>-- select an option --</option>
+                        <option value="Chicken Pasta Small = 299">Chicken Pasta Small = 299</option>
+                        <option value="Chicken Pasta Large = 599">Chicken Pasta Large = 599</option>
+                      </select>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu8.jpg" width="170" height="170" loading="lazy" alt="Opu Fish"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="https://www.foodpanda.pk/restaurant/dzjq/mr-khan-broast-and-fastfood" class="card-title">Pizza Fries</a>
+                    </h3>
+                    <select name="" class="input-field">
+                        <option disabled selected value>-- select an option --</option>
+                        <option value="Pizza Fries Small = 249">Pizza Fries Small = 249</option>
+                        <option value="Pizza Fries Large = 499">Pizza Fries Large = 499</option>
+                      </select>
+                    </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu9.jpg" width="170" height="170" loading="lazy" alt="Opu Fish"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="https://www.foodpanda.pk/restaurant/dzjq/mr-khan-broast-and-fastfood" class="card-title">Sandwich</a>
+                    </h3>
+                    <select name="" class="input-field">
+                        <option disabled selected value>-- select an option --</option>
+                        <option value="Chicken Sandwich = 299">Chicken Sandwich = 299</option>
+                        <option value="Maxican Sandwich = 399">Maxican Sandwich = 399</option>
+                      </select>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+
+          <div class="icon-wrapper">
+
+            <input type="text" name="Name" placeholder="Your Name" autocomplete="off" class="input-field" required>
+            <div class="separator"></div>
+
+          <input type="number" name="Number" placeholder="Phone Number" autocomplete="off" class="input-field" required>
+          <div class="separator"></div>
+
+          <input type="text" name="address" placeholder="Your Address" autocomplete="off" class="input-field" required>
+          </div>
+
+          <a href="" class="btn btn-primary">
+            <span class="text text-1">Confirm Your Order</span>
+
+            <span class="text text-2" aria-hidden="true">Confirm Your Order</span>
+          </a>
+
+          <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
+            class="shape shape-2 move-anim">
+          <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
+            class="shape shape-3 move-anim">
+
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #FEATURES
+      -->
+
+      <section class="section features text-center" aria-label="features">
+        <div class="container">
+
+          <p class="section-subtitle label-2">Why Choose Us</p>
+
+          <h2 class="headline-1 section-title">Our Strength</h2>
+
+          <ul class="grid-list">
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">Hygienic Food</h3>
+
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-2.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">Fresh Environment</h3>
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-3.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">Skilled Chefs</h3>
+              </div>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-4.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+
+                <h3 class="title-2 card-title">Event & Party</h3>
+              </div>
+            </li>
+
+          </ul>
+
+          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape"
+            class="shape shape-1">
+
+          <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
+            class="shape shape-2">
+
+        </div>
+      </section>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer section has-bg-image text-center"
+    style="background-image: url('./assets/images/footer-bg.jpg')">
+    <div class="container">
+
+      <div class="footer-top grid-list">
+
+        <div class="footer-brand has-before has-after">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.png" width="160" height="50" loading="lazy" alt="grilli home">
+          </a>
+
+          <address class="body-4">
+            Shop no:R-03, Sector 48 C Korangi, Karachi, Karachi City, Sindh 74900
+          </address>
+
+           <a href="tel:+923703541599" class="body-4 contact-link">Booking Request : +92 370 3541599</a>
+
+          <p class="body-4">
+            Open : 05:00 pm - 02:00 am
+          </p>
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+          <p class="title-1">Get News & Offers</p>
+
+          <p class="label-1">
+            Subscribe us & Get <span class="span">25% Off.</span>
+          </p>
+
+          <form action="" class="input-wrapper">
+            <div class="icon-wrapper">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">Subscribe</span>
+
+              <span class="text text-2" aria-hidden="true">Subscribe</span>
+            </button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Home</a>
+          </li>
+
+          <li>
+            <a href="#menu" class="label-2 footer-link hover-underline">Menus</a>
+          </li>
+
+          <li>
+            <a href="#about" class="label-2 footer-link hover-underline">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Our Chefs</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="label-2 footer-link hover-underline">Contact</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61573092321856&mibextid=ZbWKwL" class="label-2 footer-link hover-underline">Facebook</a>
+          </li>
+
+          <li>
+            <a href="https://maps.app.goo.gl/Pm7nk97wit2E2JZw8?g_st=com.google.maps.preview.copy" class="label-2 footer-link hover-underline">Google Map</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2024 Mr. Khan. All Rights Reserved | Crafted by <a href="tel:+923220255087"
+            target="_self" class="link">Muhammad Shahroz</a>
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
