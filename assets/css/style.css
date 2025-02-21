@@ -1101,6 +1101,37 @@ body.nav-active { overflow: hidden; }
   right: 0;
 }
 
+/* Quantity Input Styles */
+.quantity-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.quantity-group label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  font-size: var(--body-4);
+}
+
+.quantity-input {
+  width: 60px;
+  padding: 4px;
+  border: 1px solid var(--gold-crayola);
+  border-radius: 4px;
+  background-color: var(--smoky-black-2);
+  color: var(--white);
+  text-align: center;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: var(--white);
+}
+
 
 
 

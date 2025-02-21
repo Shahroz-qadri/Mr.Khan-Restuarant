@@ -16,7 +16,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/logo.png">
 
   <!-- 
     - google font link
@@ -68,10 +68,6 @@
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
 
-        <a href="#" class="logo">
-          <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
-        </a>
-
         <ul class="navbar-list">
 
           <li class="navbar-item">
@@ -97,14 +93,6 @@
               <span class="span">About Us</span>
             </a>
           </li>
-
-          <!-- <li class="navbar-item">
-            <a href="#" class="navbar-link hover-underline">
-              <div class="separator"></div>
-
-              <span class="span">Our Chefs</span>
-            </a>
-          </li> -->
 
           <li class="navbar-item">
             <a href="#contact" class="navbar-link hover-underline">
@@ -136,12 +124,6 @@
         </div>
 
       </nav>
-
-      <a href="#contact" class="btn btn-secondary">
-        <span class="text text-1">Find A Table</span>
-
-        <span class="text text-2" aria-hidden="true">Find A Table</span>
-      </a>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <span class="line line-1"></span>
@@ -185,14 +167,72 @@
                     <h3 class="title-3">
                       <a href="" class="card-title">Burger</a>
                     </h3>
-                    <select name="Burger" class="input-field">
-                        <option disabled selected value>-- select an option --</option>
-                        <option value="Zinger Burger = 250">Zinger Burger = 250</option>
-                        <option value="Mighty Burger = 350">Mighty Burger = 350</option>
-                        <option value="Jumbo Burger = 599">Jumbo Burger = 599</option>
-                        <option value="Zinger Cheese Burger = 299">Zinger Cheese Burger = 299</option>
-                        <option value="Mighty Cheese Burger = 399">Mighty Cheese Burger = 399</option>
-                      </select>
+                    <div class="burger-options">
+                      <div class="burger-item">
+                        <span>Zinger Burger - 250</span>
+                        <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+                          <button onclick="decreaseQty('zinger')">-</button>
+                          <span id="zinger-qty">0</span>
+                          <button onclick="increaseQty('zinger')">+</button>
+                        </div>
+                      </div>
+                    
+                      <div class="burger-item">
+                        <span>Mighty Burger - 350</span>
+                        <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                          <button onclick="decreaseQty('mighty')">-</button>
+                          <span id="mighty-qty">0</span>
+                          <button onclick="increaseQty('mighty')">+</button>
+                        </div>
+                      </div>
+                    
+                      <div class="burger-item">
+                        <span>Jumbo Burger - 599</span>
+                        <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                          <button onclick="decreaseQty('jumbo')">-</button>
+                          <span id="jumbo-qty">0</span>
+                          <button onclick="increaseQty('jumbo')">+</button>
+                        </div>
+                      </div>
+                    
+                      <div class="burger-item">
+                        <span>Zinger Cheese Burger - 299</span>
+                        <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                          <button onclick="decreaseQty('zinger-cheese')">-</button>
+                          <span id="zinger-cheese-qty">0</span>
+                          <button onclick="increaseQty('zinger-cheese')">+</button>
+                        </div>
+                      </div>
+                    
+                      <div class="burger-item">
+                        <span>Mighty Cheese Burger - 399</span>
+                        <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                          <button onclick="decreaseQty('mighty-cheese')">-</button>
+                          <span id="mighty-cheese-qty">0</span>
+                          <button onclick="increaseQty('mighty-cheese')">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <script>
+                      function increaseQty(burger) {
+                        let qtyElement = document.getElementById(`${burger}-qty`);
+                        qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                      }
+                    
+                      function decreaseQty(burger) {
+                        let qtyElement = document.getElementById(`${burger}-qty`);
+                        let currentQty = parseInt(qtyElement.textContent);
+                        if (currentQty > 0) {
+                          qtyElement.textContent = currentQty - 1;
+                        }
+                      }
+                    </script>
+
 
                   </div>
 
@@ -215,12 +255,57 @@
                     <h3 class="title-3">
                       <a href="" class="card-title">Pizza</a>
                     </h3>
-                    <select name="" class="input-field">
-                        <option disabled selected value>-- select an option --</option>
-                        <option value="Small Pizza = 199">Small Pizza = 199</option>
-                        <option value="Regular Pizza = 299">Regular Pizza = 299</option>
-                        <option value="Large Pizza = 449">Large Pizza = 449</option>
-                      </select>
+                    <div class="pizza-options">
+                        <div class="pizza-item">
+                          <span>Small Pizza = 199</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('small')">-</button>
+                            <span id="small-qty">0</span>
+                            <button onclick="increaseQty('small')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="pizza-item">
+                          <span>Regular Pizza = 299</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('Regular')">-</button>
+                            <span id="regular-qty">0</span>
+                            <button onclick="increaseQty('regular')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="pizza-item">
+                          <span>Large Pizza = 499</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('large')">-</button>
+                            <span id="large-qty">0</span>
+                            <button onclick="increaseQty('large')">+</button>
+                          </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <script>
+                        function increaseQty(pizza) {
+                          let qtyElement = document.getElementById(`${pizza}-qty`);
+                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                        }
+                      
+                        function decreaseQty(pizza) {
+                          let qtyElement = document.getElementById(`${pizza}-qty`);
+                          let currentQty = parseInt(qtyElement.textContent);
+                          if (currentQty > 0) {
+                            qtyElement.textContent = currentQty - 1;
+                          }
+                        }
+                      </script>
+
+
+
                   </div>
 
                 </div>
@@ -243,15 +328,83 @@
                     <h3 class="title-3">
                       <a href="" class="card-title">Calzon</a>
                     </h3>
-                    <select name="" class="input-field">
-                        <option disabled selected value>-- select an option --</option>
-                        <option value="Tikka Regular = 299">Tikka Regular = 299</option>
-                        <option value="Tikka Large = 449">Tikka Large = 449</option>
-                        <option value="Fajita Regular = 299">Fajita Regular = 299</option>
-                        <option value="Fajita Large = 499">Fajita Large = 499</option>
-                        <option value="Afghani Regular = 299">Afghani Regular = 299</option>
-                        <option value="Afghani Large = 499">Afghani Large = 499</option>
-                      </select>
+                    <div class="calzon-options" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div class="calzon-item">
+                          <span>Tikka Regular = 299</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+                            <button onclick="decreaseQty('tikka-regular')">-</button>
+                          <span id="tikka-regular-qty">0</span>
+                          <button onclick="increaseQty('tikka-regular')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="calzon-item">
+                          <span>Tikka Large = 499</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('tikka-large')">-</button>
+                            <span id="tikka-large-qty">0</span>
+                            <button onclick="increaseQty('tikka-large')">+</button>
+                          </div>
+                          </div>
+                      
+                        <div class="calzon-item">
+                          <span>Afghani Regular = 299</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('afghani-regular')">-</button>
+                            <span id="afghani-regular-qty">0</span>
+                            <button onclick="increaseQty('afghani-regular')">+</button>
+                          </div>
+                        </div>
+                        <div class="calzon-item">
+                            <span>Afghani Large = 499</span>
+                            <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                              <button onclick="decreaseQty('afghani-large')">-</button>
+                              <span id="afghani-large-qty">0</span>
+                              <button onclick="increaseQty('afghani-large')">+</button>
+                            </div>
+                          </div>
+                        
+                          <div class="calzon-item">
+                            <span>Fajita Regular = 299</span>
+                            <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                              <button onclick="decreaseQty('fajita-regular')">-</button>
+                              <span id="fajita-regular-qty">0</span>
+                              <button onclick="increaseQty('fajita-regular')">+</button>
+                            </div>
+                          </div>
+                        
+                          <div class="calzon-item">
+                            <span>Fajita Large = 499</span>
+                            <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                              <button onclick="decreaseQty('fajita-large')">-</button>
+                              <span id="fajita-large-qty">0</span>
+                              <button onclick="increaseQty('fajita-large')">+</button>
+                            </div>
+                          </div>
+                    </div>
+
+
+                    
+                    <script>
+                        function increaseQty(calzon) {
+                          let qtyElement = document.getElementById(`${calzon}-qty`);
+                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                        }
+                      
+                        function decreaseQty(calzon) {
+                          let qtyElement = document.getElementById(`${calzon}-qty`);
+                          let currentQty = parseInt(qtyElement.textContent);
+                          if (currentQty > 0) {
+                            qtyElement.textContent = currentQty - 1;
+                          }
+                        }
+                      </script>
+
                   </div>
 
                 </div>
@@ -273,11 +426,45 @@
                     <h3 class="title-3">
                       <a href="" class="card-title">Lasagna</a>
                     </h3>
-                    <select name="" class="input-field">
-                        <option disabled selected value>-- select an option --</option>
-                        <option value="Chicken Lasagna Small = 299">Chicken Lasagna Small = 299</option>
-                        <option value="Chicken Lasagna Large = 599">Chicken Lasagna Large = 599</option>
-                      </select>
+                    <div class="lasagna-options">
+                        <div class="lasagna-item">
+                          <span>Chicken Lasagna Small = 299</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('lasagna-small')">-</button>
+                            <span id="lasagna-small-qty">0</span>
+                            <button onclick="increaseQty('lasagna-small')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="lasagna-item">
+                          <span>Chicken Lasagna Large = 599</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('lasagna-large')">-</button>
+                            <span id="lasagna-large-qty">0</span>
+                            <button onclick="increaseQty('lasagna-large')">+</button>
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <script>
+                        function increaseQty(lasagna) {
+                          let qtyElement = document.getElementById(`${lasagna}-qty`);
+                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                        }
+                      
+                        function decreaseQty(lasagna) {
+                          let qtyElement = document.getElementById(`${lasagna}-qty`);
+                          let currentQty = parseInt(qtyElement.textContent);
+                          if (currentQty > 0) {
+                            qtyElement.textContent = currentQty - 1;
+                          }
+                        }
+                      </script>
+
+
                   </div>
 
                 </div>
@@ -299,13 +486,65 @@
                     <h3 class="title-3">
                       <a href="" class="card-title">Roll</a>
                     </h3>
-                    <select name="" class="input-field">
-                        <option disabled selected value>-- select an option --</option>
-                        <option value="Zinger Roll = 160">Zinger Roll = 160</option>
-                        <option value="Zinger Cheese Roll = 199">Zinger Cheese Roll = 199</option>
-                        <option value="Party Roll = 250">Party Roll = 250</option>
-                        <option value="Party Cheese Roll = 299">Party Cheese Roll = 299</option>
-                      </select>
+                    <div class="roll-options">
+                        <div class="roll-item">
+                          <span>Zinger Roll = 160</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('zinger-roll')">-</button>
+                            <span id="zinger-roll-qty">0</span>
+                            <button onclick="increaseQty('zinger-roll')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="roll-item">
+                          <span>Zinger Cheese Roll = 199</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('zinger-cheese-roll')">-</button>
+                            <span id="zinger-cheese-roll-qty">0</span>
+                            <button onclick="increaseQty('zinger-cheese-roll')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="roll-item">
+                          <span>Party Roll = 250</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('party-roll')">-</button>
+                            <span id="party-roll-qty">0</span>
+                            <button onclick="increaseQty('party-roll')">+</button>
+                          </div>
+                        </div>
+                        <div class="roll-item">
+                            <span>Party Cheese Roll = 299</span>
+                            <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                              <button onclick="decreaseQty('party-cheese-roll')">-</button>
+                              <span id="party-cheese-roll-qty">0</span>
+                              <button onclick="increaseQty('party-cheese-roll')">+</button>
+                            </div>
+                          </div>
+                    </div>
+
+
+                    <script>
+                        function increaseQty(roll) {
+                          let qtyElement = document.getElementById(`${roll}-qty`);
+                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                        }
+                      
+                        function decreaseQty(roll) {
+                          let qtyElement = document.getElementById(`${roll}-qty`);
+                          let currentQty = parseInt(qtyElement.textContent);
+                          if (currentQty > 0) {
+                            qtyElement.textContent = currentQty - 1;
+                          }
+                        }
+                      </script>
+
+
+
                   </div>
 
                 </div>
@@ -328,11 +567,45 @@
                     <h3 class="title-3">
                       <a href="" class="card-title">Pasta</a>
                     </h3>
-                    <select name="" class="input-field">
-                        <option disabled selected value>-- select an option --</option>
-                        <option value="Chicken Pasta Small = 299">Chicken Pasta Small = 299</option>
-                        <option value="Chicken Pasta Large = 599">Chicken Pasta Large = 599</option>
-                      </select>
+                    <div class="pasta-options">
+                        <div class="pasta-item">
+                          <span>Chicken Pasta Small = 299</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('pasta-small')">-</button>
+                            <span id="pasta-small-qty">0</span>
+                            <button onclick="increaseQty('pasta-small')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="pasta-item">
+                          <span>Chicken Pasta Large = 599</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('pasta-large')">-</button>
+                            <span id="pasta-large-qty">0</span>
+                            <button onclick="increaseQty('pasta-large')">+</button>
+                          </div>
+                          </div>
+                    </div>
+
+
+                    <script>
+                        function increaseQty(pasta) {
+                          let qtyElement = document.getElementById(`${pasta}-qty`);
+                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                        }
+                      
+                        function decreaseQty(pasta) {
+                          let qtyElement = document.getElementById(`${pasta}-qty`);
+                          let currentQty = parseInt(qtyElement.textContent);
+                          if (currentQty > 0) {
+                            qtyElement.textContent = currentQty - 1;
+                          }
+                        }
+                      </script>
+
+
                   </div>
 
                 </div>
@@ -354,11 +627,43 @@
                     <h3 class="title-3">
                       <a href="" class="card-title">Pizza Fries</a>
                     </h3>
-                    <select name="" class="input-field">
-                        <option disabled selected value>-- select an option --</option>
-                        <option value="Pizza Fries Small = 249">Pizza Fries Small = 249</option>
-                        <option value="Pizza Fries Large = 499">Pizza Fries Large = 499</option>
-                      </select>
+                    <div class="pizza-fries-options">
+                        <div class="pizza-fries-item">
+                          <span>Pizza Fries small = 249</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('pizza-fries-small')">-</button>
+                            <span id="pizza-fries-small-qty">0</span>
+                            <button onclick="increaseQty('pizza-fries-small')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="pizza-fries-item">
+                          <span>Pizza Fries Large = 499</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('pizza-fries-large')">-</button>
+                            <span id="pizza-fries-large-qty">0</span>
+                            <button onclick="increaseQty('pizza-fries-large')">+</button>
+                          </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        function increaseQty(pizza_fries) {
+                          let qtyElement = document.getElementById(`${pizza_fries}-qty`);
+                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                        }
+                      
+                        function decreaseQty(pizza_fries) {
+                          let qtyElement = document.getElementById(`${pizza_fries}-qty`);
+                          let currentQty = parseInt(qtyElement.textContent);
+                          if (currentQty > 0) {
+                            qtyElement.textContent = currentQty - 1;
+                          }
+                        }
+                      </script>
+
                     </div>
 
                 </div>
@@ -380,11 +685,44 @@
                     <h3 class="title-3">
                       <a href="" class="card-title">Sandwich</a>
                     </h3>
-                    <select name="" class="input-field">
-                        <option disabled selected value>-- select an option --</option>
-                        <option value="Chicken Sandwich = 299">Chicken Sandwich = 299</option>
-                        <option value="Maxican Sandwich = 399">Maxican Sandwich = 399</option>
-                      </select>
+                    <div class="sandwich-options">
+                        <div class="sandwich-item">
+                          <span>Chicken Sandwich = 299</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('chicken')">-</button>
+                            <span id="chicken-qty">0</span>
+                            <button onclick="increaseQty('chicken')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="sandwich-item">
+                          <span>Maxican Sandwich = 399</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('maxican')">-</button>
+                            <span id="maxican-qty">0</span>
+                            <button onclick="increaseQty('maxican')">+</button>
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <script>
+                        function increaseQty(sandwich) {
+                          let qtyElement = document.getElementById(`${sandwich}-qty`);
+                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                        }
+                      
+                        function decreaseQty(sandwich) {
+                          let qtyElement = document.getElementById(`${sandwich}-qty`);
+                          let currentQty = parseInt(qtyElement.textContent);
+                          if (currentQty > 0) {
+                            qtyElement.textContent = currentQty - 1;
+                          }
+                        }
+                      </script>
+
                   </div>
 
                 </div>

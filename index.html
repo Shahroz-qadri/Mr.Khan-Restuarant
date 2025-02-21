@@ -16,7 +16,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/logo.png">
 
   <!-- 
     - google font link
@@ -288,9 +288,6 @@
             <img src="./assets/images/about-banner.jpeg" width="570" height="570" loading="lazy" alt="about banner"
               class="w-100" data-parallax-item data-parallax-speed="1">
 
-            <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
-              <img src="./assets/images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt=""
-                class="w-100">
             </div>
 
           </figure>
@@ -564,11 +561,13 @@
 
           </ul>
 
-          <a href="/menu.html" class="btn btn-primary">
-            <span class="text text-1">Place Your Order</span>
-
-            <span class="text text-2" aria-hidden="true">Place Your Order</span>
-          </a>
+          <button onclick="window.location.href='./menu.html'" class="btn btn-primary" id="load-more-btn">
+            <a>
+              <span class="text text-1">Place Your Order</span>
+  
+              <span class="text text-2" aria-hidden="true">Place Your Order</span>
+            </a>
+          </button>
 
 
           <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
