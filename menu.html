@@ -68,41 +68,6 @@
           <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
         </button>
 
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="#home" class="navbar-link hover-underline active">
-              <div class="separator"></div>
-
-              <span class="span">Home</span>
-            </a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#menu" class="navbar-link hover-underline">
-              <div class="separator"></div>
-
-              <span class="span">Menus</span>
-            </a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#about" class="navbar-link hover-underline">
-              <div class="separator"></div>
-
-              <span class="span">About Us</span>
-            </a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#contact" class="navbar-link hover-underline">
-              <div class="separator"></div>
-
-              <span class="span">Contact</span>
-            </a>
-          </li>
-
-        </ul>
 
         <div class="text-center">
           <p class="headline-1 navbar-title">Visit Us</p>
@@ -386,9 +351,9 @@
                               <button onclick="increaseQty('fajita-large')">+</button>
                             </div>
                           </div>
-                    </div>
-
-
+                        </div>
+                        
+                        
                     
                     <script>
                         function increaseQty(calzon) {
@@ -409,6 +374,87 @@
 
                 </div>
 
+              </div>
+            </li>
+            
+            
+            <li>
+              <div class="menu-card hover:card">
+            
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu6.jpg" width="170" height="170" loading="lazy" alt="Opu Fish"
+                    class="img-cover">
+                </figure>
+            
+                <div>
+            
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="" class="card-title">Roll</a>
+                    </h3>
+                    <div class="roll-options">
+                        <div class="roll-item">
+                          <span>Zinger Roll = 160</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+            
+                            <button onclick="decreaseQty('zinger-roll')">-</button>
+                            <span id="zinger-roll-qty">0</span>
+                            <button onclick="increaseQty('zinger-roll')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="roll-item">
+                          <span>Zinger Cheese Roll = 199</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+            
+                            <button onclick="decreaseQty('zinger-cheese-roll')">-</button>
+                            <span id="zinger-cheese-roll-qty">0</span>
+                            <button onclick="increaseQty('zinger-cheese-roll')">+</button>
+                          </div>
+                        </div>
+                      
+                        <div class="roll-item">
+                          <span>Party Roll = 250</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+            
+                            <button onclick="decreaseQty('party-roll')">-</button>
+                            <span id="party-roll-qty">0</span>
+                            <button onclick="increaseQty('party-roll')">+</button>
+                          </div>
+                        </div>
+                        <div class="roll-item">
+                            <span>Party Cheese Roll = 299</span>
+                            <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+            
+                              <button onclick="decreaseQty('party-cheese-roll')">-</button>
+                              <span id="party-cheese-roll-qty">0</span>
+                              <button onclick="increaseQty('party-cheese-roll')">+</button>
+                            </div>
+                          </div>
+                    </div>
+            
+            
+                    <script>
+                        function increaseQty(roll) {
+                          let qtyElement = document.getElementById(`${roll}-qty`);
+                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                        }
+                      
+                        function decreaseQty(roll) {
+                          let qtyElement = document.getElementById(`${roll}-qty`);
+                          let currentQty = parseInt(qtyElement.textContent);
+                          if (currentQty > 0) {
+                            qtyElement.textContent = currentQty - 1;
+                          }
+                        }
+                      </script>
+            
+            
+            
+                  </div>
+            
+                </div>
+            
               </div>
             </li>
 
@@ -472,85 +518,6 @@
               </div>
             </li>
 
-            <li>
-              <div class="menu-card hover:card">
-
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu6.jpg" width="170" height="170" loading="lazy" alt="Opu Fish"
-                    class="img-cover">
-                </figure>
-
-                <div>
-
-                  <div class="title-wrapper">
-                    <h3 class="title-3">
-                      <a href="" class="card-title">Roll</a>
-                    </h3>
-                    <div class="roll-options">
-                        <div class="roll-item">
-                          <span>Zinger Roll = 160</span>
-                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
-
-                            <button onclick="decreaseQty('zinger-roll')">-</button>
-                            <span id="zinger-roll-qty">0</span>
-                            <button onclick="increaseQty('zinger-roll')">+</button>
-                          </div>
-                        </div>
-                      
-                        <div class="roll-item">
-                          <span>Zinger Cheese Roll = 199</span>
-                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
-
-                            <button onclick="decreaseQty('zinger-cheese-roll')">-</button>
-                            <span id="zinger-cheese-roll-qty">0</span>
-                            <button onclick="increaseQty('zinger-cheese-roll')">+</button>
-                          </div>
-                        </div>
-                      
-                        <div class="roll-item">
-                          <span>Party Roll = 250</span>
-                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
-
-                            <button onclick="decreaseQty('party-roll')">-</button>
-                            <span id="party-roll-qty">0</span>
-                            <button onclick="increaseQty('party-roll')">+</button>
-                          </div>
-                        </div>
-                        <div class="roll-item">
-                            <span>Party Cheese Roll = 299</span>
-                            <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
-
-                              <button onclick="decreaseQty('party-cheese-roll')">-</button>
-                              <span id="party-cheese-roll-qty">0</span>
-                              <button onclick="increaseQty('party-cheese-roll')">+</button>
-                            </div>
-                          </div>
-                    </div>
-
-
-                    <script>
-                        function increaseQty(roll) {
-                          let qtyElement = document.getElementById(`${roll}-qty`);
-                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
-                        }
-                      
-                        function decreaseQty(roll) {
-                          let qtyElement = document.getElementById(`${roll}-qty`);
-                          let currentQty = parseInt(qtyElement.textContent);
-                          if (currentQty > 0) {
-                            qtyElement.textContent = currentQty - 1;
-                          }
-                        }
-                      </script>
-
-
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
 
 
             <li>
@@ -683,19 +650,9 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="" class="card-title">Sandwich</a>
+                      <a href="" class="card-title">Maxican Sandwich</a>
                     </h3>
                     <div class="sandwich-options">
-                        <div class="sandwich-item">
-                          <span>Chicken Sandwich = 299</span>
-                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
-
-                            <button onclick="decreaseQty('chicken')">-</button>
-                            <span id="chicken-qty">0</span>
-                            <button onclick="increaseQty('chicken')">+</button>
-                          </div>
-                        </div>
-                      
                         <div class="sandwich-item">
                           <span>Maxican Sandwich = 399</span>
                           <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
@@ -730,6 +687,87 @@
               </div>
             </li>
 
+            <li>
+              <div class="menu-card hover:card">
+
+                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                  <img src="./assets/images/menu10.jpg" width="170" height="170" loading="lazy" alt="Opu Fish"
+                    class="img-cover">
+                </figure>
+
+                <div>
+
+                  <div class="title-wrapper">
+                    <h3 class="title-3">
+                      <a href="" class="card-title">Club Sandwich</a>
+                    </h3>
+                    <div class="club-sandwich-options">
+                        <div class="club-sandwich-item">
+                          <span>Club Sandwich = 299</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('club-sandwich')">-</button>
+                            <span id="club-sandwich-qty">0</span>
+                            <button onclick="increaseQty('club-sandwich')">+</button>
+                          </div>
+                        </div>
+
+                        <div class="club-sandwich-item">
+                          <span>Club Cheese Sandwich = 350</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('cheese-sandwich')">-</button>
+                            <span id="cheese-sandwich-qty">0</span>
+                            <button onclick="increaseQty('cheese-sandwich')">+</button>
+                          </div>
+                        </div>
+
+                        <div class="club-sandwich-item">
+                          <span>Chicken Sandwich = 250</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('chicken-sandwich')">-</button>
+                            <span id="chicken-sandwich-qty">0</span>
+                            <button onclick="increaseQty('chicken-sandwich')">+</button>
+                          </div>
+                        </div>
+
+                        <div class="club-sandwich-item">
+                          <span>Zinger Sandwich = 399</span>
+                          <div style="display: flex; gap : 10px; background-color: antiquewhite; border-radius: 30px; justify-content: space-between; padding: 0px 10px; color: black;" >
+
+                            <button onclick="decreaseQty('zinger-sandwich')">-</button>
+                            <span id="zinger-sandwich-qty">0</span>
+                            <button onclick="increaseQty('zinger-sandwich')">+</button>
+                          </div>
+                        </div>
+
+                        
+                    </div>
+
+
+                    <script>
+                        function increaseQty(club_sandwich) {
+                          let qtyElement = document.getElementById(`${club_sandwich}-qty`);
+                          qtyElement.textContent = parseInt(qtyElement.textContent) + 1;
+                        }
+                      
+                        function decreaseQty(club_sandwich) {
+                          let qtyElement = document.getElementById(`${club_sandwich}-qty`);
+                          let currentQty = parseInt(qtyElement.textContent);
+                          if (currentQty > 0) {
+                            qtyElement.textContent = currentQty - 1;
+                          }
+                        }
+                      </script>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
           </ul>
 
 
@@ -744,11 +782,14 @@
           <input type="text" name="address" placeholder="Your Address" autocomplete="off" class="input-field" required>
           </div>
 
-          <a href="" class="btn btn-primary">
-            <span class="text text-1">Confirm Your Order</span>
+<button id="confirm-order" onclick="sendOrder()">
 
-            <span class="text text-2" aria-hidden="true">Confirm Your Order</span>
-          </a>
+            <a href="" class="btn btn-primary">
+              <span class="text text-1">Confirm Your Order</span>
+  
+              <span class="text text-2" aria-hidden="true">Confirm Your Order</span>
+            </a>
+          </button>
 
           <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
             class="shape shape-2 move-anim">
